@@ -1,6 +1,5 @@
 # invertIndex
 invertIndex by mapreduce
-实验方法
 Map的实现
 	Map接受的value为文件split的内容，输出的KV对为<word:filename，1>，key为单词和所属的文件名，类型为Text。value为数量1，类型为Intwritable。
 	用StringTokennizer对输入的文件按照空格分离出单词，每分离出一个单词，就和文件名组合成一个key值，并用1作为value值将KV对交给Combine处理。
